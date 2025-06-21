@@ -1,0 +1,179 @@
+@font-face {
+  font-family: blender;
+  src: url(fonts/BlenderPro-Book.ttf);
+}
+
+
+body {
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "space mono";
+  font-variant: no-common-ligatures proportional-nums;
+  //font-size: clamp(.8rem,1vw,1.5rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+#viz {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.admin {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #d4d4d4;
+  padding-left: 1rem;
+  width: 100%;
+  height: 40px;
+  opacity: 0.9;
+  padding: 4px;
+  color: white;
+  font-size: 1rem;
+  z-index: 10;
+}
+
+footer span{
+  border-right: 1px solid ;
+}
+
+.cbtxt {
+  font-weight: bold;
+}
+
+.smallText {
+  /*font-size: 0.7em;*/
+}
+
+label {
+  text-decoration: underline;
+}
+
+#fb {
+  display: none;
+}
+
+
+p {
+  cursor: default;
+  margin-top: 0;
+}
+
+.title{
+  margin-left: 1rem;
+  color: white;
+  font-weight: 900;
+  bottom: 0.4rem;
+  position: relative;
+}
+
+.title img{
+  height: 100px;
+  margin-top: 7px;
+}
+
+[id^="button"] {
+  padding: 0 1rem 0 1rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.largeCheckbox {
+	margin-left: 1rem;
+  padding: 0 1rem 0 1rem;
+	color: white;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* Hide the browser's default checkbox */
+.largeCheckbox input[type=checkbox] {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+	visibility: hidden;
+}
+/* creating a custom checkbox*/
+.mark {
+		position: absolute;
+		bottom: 0.2rem;
+		left: 0;
+		height: 1rem;
+		width: 1rem;
+		border: 3px solid #fff;
+}
+
+/*background color to be shown when hovering over checkbox */
+.largeCheckbox:hover input ~ .mark {
+		background-color:#fff;
+}
+
+
+/* checkmark to be shown in checkbox */
+/* It will not be shown when unchecked */
+.mark:after {
+		content: "";
+		position: absolute;
+		display: none;
+}
+
+/* display checkmark when checked */
+.largeCheckbox input:checked ~ .mark:after {
+		display: block;
+}
+
+/* creating a square to be the sign of
+		checkmark */
+.largeCheckbox .mark:after {
+		left: 0.1rem;
+		bottom: 0.1rem;
+		width: 0.8rem;
+		height: 0.8rem;
+		border: solid white;
+		border-width: 0.2rem;
+}
+
+@media (max-width: 740px) {
+*{
+  font-size: clamp(.9rem,1vw,1.5rem);
+}
+
+[id^="button"] {
+  padding: 0 .5rem 0 .5rem;
+}
+
+.mark {
+		position: absolute;
+		bottom: 0.2rem;
+		left: 0;
+		height: .8rem;
+		width: .8rem;
+		border: 1px solid #fff;
+}
+
+.largeCheckbox .mark:after {
+		left: 0.1rem;
+		bottom: 0.1rem;
+		width: 0.5rem;
+		height: 0.5rem;
+		border: solid white;
+    background-color: white
+		border-width: 0.1rem;
+}
+
+#service{
+  font-size: .6rem !important;
+}
+
+}

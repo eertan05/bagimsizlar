@@ -1,0 +1,51 @@
+/* Add your CSS styles for the timeline here */
+.timeline {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.timeline-container {
+  position: relative;
+  min-height: 200px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.event-year {
+  font-weight: bold;
+}
+
+.event-description {
+  margin-top: 5px;
+}
+
+#legend {
+//  width:100%;
+  font-size: 1em;
+  font-weight: bolder;
+  text-align: center;
+  position: fixed;
+  bottom:10px;
+  margin-left: 20px;
+}
+
+.legend_title {
+      border: none !important ;
+      font-size:0.7em;
+
+}
+.legend{
+  border-right: 1px solid ;
+  padding: 0 20px 0 20px;
+}

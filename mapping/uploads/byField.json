@@ -1,0 +1,2561 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "@cevrimici40dakika",
+            "type": "organization"
+        },
+        {
+            "id": 1,
+            "name": "Çevrimiçi Yayın",
+            "type": "o_def"
+        },
+        {
+            "id": 2,
+            "name": "Sanat Üretim Topluluğu",
+            "type": "o_def"
+        },
+        {
+            "id": 3,
+            "name": "Görsel Sanatlar",
+            "type": "o_fow"
+        },
+        {
+            "id": 4,
+            "name": "3dots",
+            "type": "organization"
+        },
+        {
+            "id": 5,
+            "name": "Ağ",
+            "type": "o_def"
+        },
+        {
+            "id": 6,
+            "name": "Arşiv ve Koruma",
+            "type": "o_fow"
+        },
+        {
+            "id": 7,
+            "name": "400x118",
+            "type": "organization"
+        },
+        {
+            "id": 8,
+            "name": "5533",
+            "type": "organization"
+        },
+        {
+            "id": 9,
+            "name": "Performans ve Etkinlik Mekanı",
+            "type": "o_def"
+        },
+        {
+            "id": 10,
+            "name": "Proje Alanı",
+            "type": "o_def"
+        },
+        {
+            "id": 11,
+            "name": "Sanatçı Mekanı",
+            "type": "o_def"
+        },
+        {
+            "id": 12,
+            "name": "Görsel Kültür",
+            "type": "o_fow"
+        },
+        {
+            "id": 13,
+            "name": "Performans Sanatları",
+            "type": "o_fow"
+        },
+        {
+            "id": 14,
+            "name": "A Corner in the World",
+            "type": "organization"
+        },
+        {
+            "id": 15,
+            "name": "a4atölye ",
+            "type": "organization"
+        },
+        {
+            "id": 16,
+            "name": "Açık Alan",
+            "type": "organization"
+        },
+        {
+            "id": 17,
+            "name": "Açık Masa Sanat Inisiyatifi \/Open Table Art Initiative",
+            "type": "organization"
+        },
+        {
+            "id": 18,
+            "name": "Atölye",
+            "type": "o_def"
+        },
+        {
+            "id": 19,
+            "name": "Radyo",
+            "type": "o_def"
+        },
+        {
+            "id": 20,
+            "name": "Müzik ve Sonik Sanatlar",
+            "type": "o_fow"
+        },
+        {
+            "id": 21,
+            "name": "Açık Stüdyo",
+            "type": "organization"
+        },
+        {
+            "id": 22,
+            "name": "adaptör.projekt",
+            "type": "organization"
+        },
+        {
+            "id": 23,
+            "name": "Anart - Gösteri ve Sanat Evi",
+            "type": "organization"
+        },
+        {
+            "id": 24,
+            "name": "Kültür Merkezi",
+            "type": "o_def"
+        },
+        {
+            "id": 25,
+            "name": "Apartment Project",
+            "type": "organization"
+        },
+        {
+            "id": 26,
+            "name": "Apeiron Collective",
+            "type": "organization"
+        },
+        {
+            "id": 27,
+            "name": "Aras Yayıncılık",
+            "type": "organization"
+        },
+        {
+            "id": 28,
+            "name": "Yayınevi",
+            "type": "o_def"
+        },
+        {
+            "id": 29,
+            "name": "Yayıncılık",
+            "type": "o_fow"
+        },
+        {
+            "id": 30,
+            "name": "Argonotlar",
+            "type": "organization"
+        },
+        {
+            "id": 31,
+            "name": "Basılı Yayın",
+            "type": "o_def"
+        },
+        {
+            "id": 32,
+            "name": "Kuir Çalışmalar",
+            "type": "o_fow"
+        },
+        {
+            "id": 33,
+            "name": "Art Halicarnassus",
+            "type": "organization"
+        },
+        {
+            "id": 34,
+            "name": "Edebiyat ve Şiir",
+            "type": "o_fow"
+        },
+        {
+            "id": 35,
+            "name": "Kültürel Yönetim ve Organizasyon",
+            "type": "o_fow"
+        },
+        {
+            "id": 36,
+            "name": "Artı Alan",
+            "type": "organization"
+        },
+        {
+            "id": 37,
+            "name": "Araştırma Kolektifi",
+            "type": "o_def"
+        },
+        {
+            "id": 38,
+            "name": "Diğer",
+            "type": "o_fow"
+        },
+        {
+            "id": 39,
+            "name": "ATÖLYE DENEME SANAT VE EKOLOJi DERNEĞİ",
+            "type": "organization"
+        },
+        {
+            "id": 40,
+            "name": "Sivil Toplum Kuruluşu",
+            "type": "o_def"
+        },
+        {
+            "id": 41,
+            "name": "Atta Festival",
+            "type": "organization"
+        },
+        {
+            "id": 42,
+            "name": "Dans\/Sirk Kumpanyası",
+            "type": "o_def"
+        },
+        {
+            "id": 43,
+            "name": "Tiyatro Topluluğu",
+            "type": "o_def"
+        },
+        {
+            "id": 44,
+            "name": "Avrora Atölye",
+            "type": "organization"
+        },
+        {
+            "id": 45,
+            "name": "AVTO",
+            "type": "organization"
+        },
+        {
+            "id": 46,
+            "name": "BAHÇE SANAT İNİSİYATİFİ",
+            "type": "organization"
+        },
+        {
+            "id": 47,
+            "name": "Balconnection Project ",
+            "type": "organization"
+        },
+        {
+            "id": 48,
+            "name": "Bant Mag. ",
+            "type": "organization"
+        },
+        {
+            "id": 49,
+            "name": "BAS Sanatçı Kitapları Koleksiyonu",
+            "type": "organization"
+        },
+        {
+            "id": 50,
+            "name": "Beden İşlemsel Sanatlar Derneği ",
+            "type": "organization"
+        },
+        {
+            "id": 51,
+            "name": "Yapımcı",
+            "type": "o_def"
+        },
+        {
+            "id": 52,
+            "name": "Medya Çalışmaları",
+            "type": "o_fow"
+        },
+        {
+            "id": 53,
+            "name": "Bergama Tiyatro Festivali",
+            "type": "organization"
+        },
+        {
+            "id": 54,
+            "name": "Beyoğlu Caz Festivali",
+            "type": "organization"
+        },
+        {
+            "id": 55,
+            "name": "Üretim Topluluğu",
+            "type": "o_def"
+        },
+        {
+            "id": 56,
+            "name": "Kültürel Miras",
+            "type": "o_fow"
+        },
+        {
+            "id": 57,
+            "name": "BIDON Kolektif",
+            "type": "organization"
+        },
+        {
+            "id": 58,
+            "name": "Tasarım",
+            "type": "o_fow"
+        },
+        {
+            "id": 59,
+            "name": "Birikim Atölyesi",
+            "type": "organization"
+        },
+        {
+            "id": 60,
+            "name": "Bozcaada Caz Festivali",
+            "type": "organization"
+        },
+        {
+            "id": 61,
+            "name": "Buşone Fanzin ",
+            "type": "organization"
+        },
+        {
+            "id": 62,
+            "name": "Büyük Siyah Kapı",
+            "type": "organization"
+        },
+        {
+            "id": 63,
+            "name": "Çak\/ ARAZİ",
+            "type": "organization"
+        },
+        {
+            "id": 64,
+            "name": "Çapak Yazı-Çizi",
+            "type": "organization"
+        },
+        {
+            "id": 65,
+            "name": "Caravansarai",
+            "type": "organization"
+        },
+        {
+            "id": 66,
+            "name": "Carbon Collective",
+            "type": "organization"
+        },
+        {
+            "id": 67,
+            "name": "Çatı Çağdaş Dans Sanatçıları Derneği",
+            "type": "organization"
+        },
+        {
+            "id": 68,
+            "name": "Beden Pratikleri ",
+            "type": "o_fow"
+        },
+        {
+            "id": 69,
+            "name": "Circuit",
+            "type": "organization"
+        },
+        {
+            "id": 70,
+            "name": "Çıplak Ayaklar Kumpanyası",
+            "type": "organization"
+        },
+        {
+            "id": 71,
+            "name": "Co-Operative Collective",
+            "type": "organization"
+        },
+        {
+            "id": 72,
+            "name": "ÇokAyaklılar",
+            "type": "organization"
+        },
+        {
+            "id": 73,
+            "name": "Collage Creatures",
+            "type": "organization"
+        },
+        {
+            "id": 74,
+            "name": "Collective Çukurcuma",
+            "type": "organization"
+        },
+        {
+            "id": 75,
+            "name": "D5 Sanat Ortamı-Mersin ",
+            "type": "organization"
+        },
+        {
+            "id": 76,
+            "name": "dadans",
+            "type": "organization"
+        },
+        {
+            "id": 77,
+            "name": "Dahili Bellek",
+            "type": "organization"
+        },
+        {
+            "id": 78,
+            "name": "Dance Camera Istanbul \/ Dans Kamera Istanbul",
+            "type": "organization"
+        },
+        {
+            "id": 79,
+            "name": "Dans Muşambası",
+            "type": "organization"
+        },
+        {
+            "id": 80,
+            "name": "Darağaç",
+            "type": "organization"
+        },
+        {
+            "id": 81,
+            "name": "Demo lab.",
+            "type": "organization"
+        },
+        {
+            "id": 82,
+            "name": "Kent Çalışmaları",
+            "type": "o_fow"
+        },
+        {
+            "id": 83,
+            "name": "Depo Pergamon İnisiyatifi",
+            "type": "organization"
+        },
+        {
+            "id": 84,
+            "name": "Eğitim Kurumu",
+            "type": "o_def"
+        },
+        {
+            "id": 85,
+            "name": "Mimari",
+            "type": "o_fow"
+        },
+        {
+            "id": 86,
+            "name": "Dergi",
+            "type": "organization"
+        },
+        {
+            "id": 87,
+            "name": "Dünyadan Sesler",
+            "type": "organization"
+        },
+        {
+            "id": 88,
+            "name": "EK BİÇ YE İÇ",
+            "type": "organization"
+        },
+        {
+            "id": 89,
+            "name": "Engelsiz Pedal ",
+            "type": "organization"
+        },
+        {
+            "id": 90,
+            "name": "EXIT kolektif",
+            "type": "organization"
+        },
+        {
+            "id": 91,
+            "name": "FAiL",
+            "type": "organization"
+        },
+        {
+            "id": 92,
+            "name": "Falan Fanzin",
+            "type": "organization"
+        },
+        {
+            "id": 93,
+            "name": "FilmMor",
+            "type": "organization"
+        },
+        {
+            "id": 94,
+            "name": "Filtre Platform",
+            "type": "organization"
+        },
+        {
+            "id": 95,
+            "name": "fugamundi",
+            "type": "organization"
+        },
+        {
+            "id": 96,
+            "name": "GalataPerform",
+            "type": "organization"
+        },
+        {
+            "id": 97,
+            "name": "garage",
+            "type": "organization"
+        },
+        {
+            "id": 98,
+            "name": "Ortak Çalışma Mekanı",
+            "type": "o_def"
+        },
+        {
+            "id": 99,
+            "name": "Gazhane Çevre Gönüllüleri",
+            "type": "organization"
+        },
+        {
+            "id": 100,
+            "name": "Savunuculuk Girişimi",
+            "type": "o_def"
+        },
+        {
+            "id": 101,
+            "name": "Genedos Kooperatifi",
+            "type": "organization"
+        },
+        {
+            "id": 102,
+            "name": "Çevre ve Tarım",
+            "type": "o_fow"
+        },
+        {
+            "id": 103,
+            "name": "Genis Aci Project Office",
+            "type": "organization"
+        },
+        {
+            "id": 104,
+            "name": "Gizli Atölye Kolektifi",
+            "type": "organization"
+        },
+        {
+            "id": 105,
+            "name": "Görmenin Ötesi: Sanat Buluşmaları",
+            "type": "organization"
+        },
+        {
+            "id": 106,
+            "name": "gri alan",
+            "type": "organization"
+        },
+        {
+            "id": 107,
+            "name": "Halı Atölyesi",
+            "type": "organization"
+        },
+        {
+            "id": 108,
+            "name": "halka sanat projesi",
+            "type": "organization"
+        },
+        {
+            "id": 109,
+            "name": "Hangi Sergi Nerede",
+            "type": "organization"
+        },
+        {
+            "id": 110,
+            "name": "Hayy Open Space",
+            "type": "organization"
+        },
+        {
+            "id": 111,
+            "name": "HOOD Base",
+            "type": "organization"
+        },
+        {
+            "id": 112,
+            "name": "Inverted Spectrum Records",
+            "type": "organization"
+        },
+        {
+            "id": 113,
+            "name": "iskele47",
+            "type": "organization"
+        },
+        {
+            "id": 114,
+            "name": "Istanbul Film Station",
+            "type": "organization"
+        },
+        {
+            "id": 115,
+            "name": "İstanbul Improvisation Dance Festival",
+            "type": "organization"
+        },
+        {
+            "id": 116,
+            "name": "İstanbul Permakültür Kolektifi",
+            "type": "organization"
+        },
+        {
+            "id": 117,
+            "name": "İzmir Poetik",
+            "type": "organization"
+        },
+        {
+            "id": 118,
+            "name": "K2 Çağdaş Sanat Derneği",
+            "type": "organization"
+        },
+        {
+            "id": 119,
+            "name": "Ka ",
+            "type": "organization"
+        },
+        {
+            "id": 120,
+            "name": "Karantina",
+            "type": "organization"
+        },
+        {
+            "id": 121,
+            "name": "karşı sanat çalışmaları",
+            "type": "organization"
+        },
+        {
+            "id": 122,
+            "name": "KartonKitap",
+            "type": "organization"
+        },
+        {
+            "id": 123,
+            "name": "Kemeraltı KomBost",
+            "type": "organization"
+        },
+        {
+            "id": 124,
+            "name": "Kendine Ait Bir Oda",
+            "type": "organization"
+        },
+        {
+            "id": 125,
+            "name": "Kineo Dergi",
+            "type": "organization"
+        },
+        {
+            "id": 126,
+            "name": "KIRIK",
+            "type": "organization"
+        },
+        {
+            "id": 127,
+            "name": "Kolektif Senkre",
+            "type": "organization"
+        },
+        {
+            "id": 128,
+            "name": "KOLİ Art Space",
+            "type": "organization"
+        },
+        {
+            "id": 129,
+            "name": "kültür.limited",
+            "type": "organization"
+        },
+        {
+            "id": 130,
+            "name": "Kültürhane",
+            "type": "organization"
+        },
+        {
+            "id": 131,
+            "name": "Locus Solus",
+            "type": "organization"
+        },
+        {
+            "id": 132,
+            "name": "Maquis Projects",
+            "type": "organization"
+        },
+        {
+            "id": 133,
+            "name": "maumau ",
+            "type": "organization"
+        },
+        {
+            "id": 134,
+            "name": "Mekanda Adalet Derneği",
+            "type": "organization"
+        },
+        {
+            "id": 135,
+            "name": "Siyasal ve Toplumsal Tarih",
+            "type": "o_fow"
+        },
+        {
+            "id": 136,
+            "name": "Merkezkaç Çağdaş Sanat Derneği",
+            "type": "organization"
+        },
+        {
+            "id": 137,
+            "name": "Meserret Oteli Misafir Sanatçı Programı",
+            "type": "organization"
+        },
+        {
+            "id": 138,
+            "name": "Metal Kolektif",
+            "type": "organization"
+        },
+        {
+            "id": 139,
+            "name": "metr.cube",
+            "type": "organization"
+        },
+        {
+            "id": 140,
+            "name": "Misar Art",
+            "type": "organization"
+        },
+        {
+            "id": 141,
+            "name": "Monitor",
+            "type": "organization"
+        },
+        {
+            "id": 142,
+            "name": "Montag Residency",
+            "type": "organization"
+        },
+        {
+            "id": 143,
+            "name": "mtaär open art space",
+            "type": "organization"
+        },
+        {
+            "id": 144,
+            "name": "Ne Yerde Ne Gökte Derneği ",
+            "type": "organization"
+        },
+        {
+            "id": 145,
+            "name": "No 238 ",
+            "type": "organization"
+        },
+        {
+            "id": 146,
+            "name": "NOBON-İlham Veren İşler #izmirdeoluyor",
+            "type": "organization"
+        },
+        {
+            "id": 147,
+            "name": "NOKS Art Space",
+            "type": "organization"
+        },
+        {
+            "id": 148,
+            "name": "Nomad Mind",
+            "type": "organization"
+        },
+        {
+            "id": 149,
+            "name": "Notio",
+            "type": "organization"
+        },
+        {
+            "id": 150,
+            "name": "oda projesi",
+            "type": "organization"
+        },
+        {
+            "id": 151,
+            "name": "Odeon Pergamon Kültür Sanat Alanı",
+            "type": "organization"
+        },
+        {
+            "id": 152,
+            "name": "Olta Dayanışma",
+            "type": "organization"
+        },
+        {
+            "id": 153,
+            "name": "OPUS XI ",
+            "type": "organization"
+        },
+        {
+            "id": 154,
+            "name": "Orta Format",
+            "type": "organization"
+        },
+        {
+            "id": 155,
+            "name": "OT DERGİ",
+            "type": "organization"
+        },
+        {
+            "id": 156,
+            "name": "Park",
+            "type": "organization"
+        },
+        {
+            "id": 157,
+            "name": "PASAJ",
+            "type": "organization"
+        },
+        {
+            "id": 158,
+            "name": "Performistanbul Performans Sanatını Geliştirme Derneği",
+            "type": "organization"
+        },
+        {
+            "id": 159,
+            "name": "Poşe artist run space",
+            "type": "organization"
+        },
+        {
+            "id": 160,
+            "name": "qer",
+            "type": "organization"
+        },
+        {
+            "id": 161,
+            "name": "qwesfwsdef",
+            "type": "organization"
+        },
+        {
+            "id": 162,
+            "name": "roma bostanı",
+            "type": "organization"
+        },
+        {
+            "id": 163,
+            "name": "Rubber Hammer ",
+            "type": "organization"
+        },
+        {
+            "id": 164,
+            "name": "Sanat Okur",
+            "type": "organization"
+        },
+        {
+            "id": 165,
+            "name": "Sarı Denizaltı",
+            "type": "organization"
+        },
+        {
+            "id": 166,
+            "name": "sdvsd",
+            "type": "organization"
+        },
+        {
+            "id": 167,
+            "name": "SesOl.org : Ses Haritaları Platformu",
+            "type": "organization"
+        },
+        {
+            "id": 168,
+            "name": "Shelter Artists Run Space",
+            "type": "organization"
+        },
+        {
+            "id": 169,
+            "name": "Sisters Music Chain",
+            "type": "organization"
+        },
+        {
+            "id": 170,
+            "name": "Feminist Çalışmalar",
+            "type": "o_fow"
+        },
+        {
+            "id": 171,
+            "name": "Sınırlı Sorumlu Kent Çalışmaları Kooperatifi",
+            "type": "organization"
+        },
+        {
+            "id": 172,
+            "name": "Sokak Bizim ",
+            "type": "organization"
+        },
+        {
+            "id": 173,
+            "name": "sonra",
+            "type": "organization"
+        },
+        {
+            "id": 174,
+            "name": "Ajans",
+            "type": "o_def"
+        },
+        {
+            "id": 175,
+            "name": "Street Disco",
+            "type": "organization"
+        },
+        {
+            "id": 176,
+            "name": "Studiolo",
+            "type": "organization"
+        },
+        {
+            "id": 177,
+            "name": "GKAM (Galeri",
+            "type": "o_def"
+        },
+        {
+            "id": 178,
+            "name": "Kütüphane",
+            "type": "o_def"
+        },
+        {
+            "id": 179,
+            "name": "Arşiv",
+            "type": "o_def"
+        },
+        {
+            "id": 180,
+            "name": "Müze)",
+            "type": "o_def"
+        },
+        {
+            "id": 181,
+            "name": "sub",
+            "type": "organization"
+        },
+        {
+            "id": 182,
+            "name": "SyncSociety",
+            "type": "organization"
+        },
+        {
+            "id": 183,
+            "name": "Tab Residency",
+            "type": "organization"
+        },
+        {
+            "id": 184,
+            "name": "Taldans",
+            "type": "organization"
+        },
+        {
+            "id": 185,
+            "name": "Through The Window",
+            "type": "organization"
+        },
+        {
+            "id": 186,
+            "name": "tibia x fibula",
+            "type": "organization"
+        },
+        {
+            "id": 187,
+            "name": "Hibrid Yayın",
+            "type": "o_def"
+        },
+        {
+            "id": 188,
+            "name": "tiyatro nienor",
+            "type": "organization"
+        },
+        {
+            "id": 189,
+            "name": "Tiyatrohane",
+            "type": "organization"
+        },
+        {
+            "id": 190,
+            "name": "TOHUM Sanat Alanı",
+            "type": "organization"
+        },
+        {
+            "id": 191,
+            "name": "torna",
+            "type": "organization"
+        },
+        {
+            "id": 192,
+            "name": "UrbanTank",
+            "type": "organization"
+        },
+        {
+            "id": 193,
+            "name": "Üretim Kaydı",
+            "type": "organization"
+        },
+        {
+            "id": 194,
+            "name": "Vatoz ",
+            "type": "organization"
+        },
+        {
+            "id": 195,
+            "name": "VATOZ PLATFORM",
+            "type": "organization"
+        },
+        {
+            "id": 196,
+            "name": "Wargasm Records",
+            "type": "organization"
+        },
+        {
+            "id": 197,
+            "name": "YAYA \/ Viable.Istanbul",
+            "type": "organization"
+        },
+        {
+            "id": 198,
+            "name": "Ye'r Community",
+            "type": "organization"
+        },
+        {
+            "id": 199,
+            "name": "Yermekân",
+            "type": "organization"
+        },
+        {
+            "id": 200,
+            "name": "YOĞUNLUK",
+            "type": "organization"
+        },
+        {
+            "id": 201,
+            "name": "Yokuşunbaşı",
+            "type": "organization"
+        },
+        {
+            "id": 202,
+            "name": "Veri ve Enformasyon",
+            "type": "o_fow"
+        },
+        {
+            "id": 203,
+            "name": "Yüksek Oda",
+            "type": "organization"
+        },
+        {
+            "id": 204,
+            "name": "Yumurta Yapım Sanat",
+            "type": "organization"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 4,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 7,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 7,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 8,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 19,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 17,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 23,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 23,
+            "target": 24,
+            "relation": "is"
+        },
+        {
+            "source": 23,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 23,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 27,
+            "target": 28,
+            "relation": "is"
+        },
+        {
+            "source": 27,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 30,
+            "target": 31,
+            "relation": "is"
+        },
+        {
+            "source": 30,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 30,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 30,
+            "target": 32,
+            "relation": "is"
+        },
+        {
+            "source": 30,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 33,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 33,
+            "target": 34,
+            "relation": "is"
+        },
+        {
+            "source": 33,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 33,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 36,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 36,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 36,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 36,
+            "target": 38,
+            "relation": "is"
+        },
+        {
+            "source": 39,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 39,
+            "target": 38,
+            "relation": "is"
+        },
+        {
+            "source": 39,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 41,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 41,
+            "target": 42,
+            "relation": "is"
+        },
+        {
+            "source": 41,
+            "target": 43,
+            "relation": "is"
+        },
+        {
+            "source": 41,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 49,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 49,
+            "target": 28,
+            "relation": "is"
+        },
+        {
+            "source": 49,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 49,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 49,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 51,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 50,
+            "target": 52,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 51,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 56,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 54,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 57,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 57,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 57,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 57,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 59,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 31,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 34,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 61,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 64,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 66,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 66,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 68,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 67,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 68,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 71,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 73,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 73,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 73,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 73,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 74,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 74,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 81,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 84,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 24,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 56,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 85,
+            "relation": "is"
+        },
+        {
+            "source": 83,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 87,
+            "target": 19,
+            "relation": "is"
+        },
+        {
+            "source": 87,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 87,
+            "target": 51,
+            "relation": "is"
+        },
+        {
+            "source": 87,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 87,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 98,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 97,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 99,
+            "target": 98,
+            "relation": "is"
+        },
+        {
+            "source": 99,
+            "target": 100,
+            "relation": "is"
+        },
+        {
+            "source": 99,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 99,
+            "target": 56,
+            "relation": "is"
+        },
+        {
+            "source": 99,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 101,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 101,
+            "target": 102,
+            "relation": "is"
+        },
+        {
+            "source": 101,
+            "target": 38,
+            "relation": "is"
+        },
+        {
+            "source": 101,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 103,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 103,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 103,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 103,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 103,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 105,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 105,
+            "target": 100,
+            "relation": "is"
+        },
+        {
+            "source": 105,
+            "target": 38,
+            "relation": "is"
+        },
+        {
+            "source": 105,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 105,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 98,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 32,
+            "relation": "is"
+        },
+        {
+            "source": 106,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 108,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 108,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 108,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 108,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 108,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 109,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 109,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 112,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 112,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 112,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 112,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 55,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 114,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 98,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 118,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 24,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 9,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 121,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 124,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 124,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 124,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 132,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 132,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 132,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 132,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 132,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 28,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 135,
+            "relation": "is"
+        },
+        {
+            "source": 134,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 137,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 137,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 137,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 137,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 139,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 139,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 139,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 139,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 24,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 38,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 142,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 145,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 145,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 145,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 145,
+            "target": 135,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 24,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 148,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 149,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 149,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 149,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 149,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 149,
+            "target": 85,
+            "relation": "is"
+        },
+        {
+            "source": 155,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 155,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 156,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 156,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 160,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 160,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 161,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 161,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 163,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 163,
+            "target": 68,
+            "relation": "is"
+        },
+        {
+            "source": 163,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 163,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 164,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 164,
+            "target": 34,
+            "relation": "is"
+        },
+        {
+            "source": 164,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 164,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 166,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 166,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 168,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 169,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 169,
+            "target": 170,
+            "relation": "is"
+        },
+        {
+            "source": 169,
+            "target": 20,
+            "relation": "is"
+        },
+        {
+            "source": 169,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 171,
+            "target": 40,
+            "relation": "is"
+        },
+        {
+            "source": 171,
+            "target": 82,
+            "relation": "is"
+        },
+        {
+            "source": 171,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 171,
+            "target": 85,
+            "relation": "is"
+        },
+        {
+            "source": 173,
+            "target": 174,
+            "relation": "is"
+        },
+        {
+            "source": 173,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 173,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 173,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 173,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 177,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 178,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 179,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 180,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 19,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 56,
+            "relation": "is"
+        },
+        {
+            "source": 176,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 184,
+            "target": 5,
+            "relation": "is"
+        },
+        {
+            "source": 184,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 37,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 187,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 13,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 58,
+            "relation": "is"
+        },
+        {
+            "source": 186,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 190,
+            "target": 35,
+            "relation": "is"
+        },
+        {
+            "source": 193,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 193,
+            "target": 19,
+            "relation": "is"
+        },
+        {
+            "source": 193,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 193,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 193,
+            "target": 29,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 1,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 19,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 170,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 195,
+            "target": 52,
+            "relation": "is"
+        },
+        {
+            "source": 199,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 199,
+            "target": 2,
+            "relation": "is"
+        },
+        {
+            "source": 199,
+            "target": 11,
+            "relation": "is"
+        },
+        {
+            "source": 199,
+            "target": 12,
+            "relation": "is"
+        },
+        {
+            "source": 199,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 18,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 84,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 10,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 6,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 3,
+            "relation": "is"
+        },
+        {
+            "source": 201,
+            "target": 202,
+            "relation": "is"
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+/* Window Engine - MIT License - Copyright (c) 2019 Gauthier Staehler */
+/*
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*/
+
+.windowGroup {
+	font-family: "space mono";
+	font-size: 1.5em;
+	line-height: 1.5;
+}
+
+.windowGroup p {
+	cursor: default;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+.window {
+	position: absolute;
+	border-radius: 10px 0px 0 0;
+	box-shadow: 6px 6px 0px -6px #888888;
+	opacity: 0.9;
+	display: none;
+}
+
+#window1 {
+	bottom: 40px !important;
+	left: 0;
+	z-index: 9;
+	background-color: #f1f1f1;
+	width: 15rem !important;
+	height:auto !important;
+}
+
+#window2 {
+	bottom: 60px !important;
+	right:20px;
+	z-index: 9;
+	background-color: #f1f1f1;
+	width: 20rem !important;
+	resize:both;
+	overflow-y:scroll;
+}
+
+#window3 {
+	top: 88px !important;
+	right:0;
+	z-index: 9;
+	background-color: #f1f1f1;
+	width: 400px !important;
+	word-break: break-all;
+	resize: both;
+	overflow:hidden;
+}
+
+input.types {
+		width: 20px;
+		height: 20px;
+}
+
+[id$="header"]:not(#nav_primary [id$="header"])
+ {
+	padding: 4px 10px 0 10px;
+	z-index: 10;
+	color: #fff;
+	font-size: 1.2rem;
+	height: 2rem;
+	justify-content: space-between;
+	display: flex;
+	touch-action: none;
+	cursor: move;
+}
+
+.windowActive {
+	z-index: 100;
+}
+
+.windowTitle {
+	position: relative;
+	  vertical-align: middle;
+}
+
+.mainWindow {
+	padding: 20px;
+	font-size: .8rem;
+	font-weight: normal;
+}
+
+[id^="closeButton"] {
+	color: white;
+	cursor:pointer;
+	position: relative;
+	bottom: 9px;
+	font-size: 2rem;
+}
+
+.purple {
+	background-color: rebeccapurple;
+}
+
+.orange {
+	background-color: burlywood;
+}
+
+.brown {
+	background-color: brown;
+}
+
+.cyan {
+	background-color: darkcyan;
+}
+
+.crimson {
+	background-color: crimson;
+}
+
+.green {
+	background-color: darkgreen;
+}
+
+.gray{
+	background-color: #dddddd;
+}
+
+.small {
+	width: 600px;
+}
+
+.large {
+	width: 1000px;
+}

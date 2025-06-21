@@ -1,0 +1,224 @@
+:root {
+  --main-hl-color: #9c69c9;
+  --aboutBG: rgba(255, 255, 255, 0.9);
+  --thumbBG: #000;
+  --text-color: #000;
+  --reverse: #fff;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 12px;
+  overflow: hidden;
+  font-family: "Space Mono";
+}
+
+h1 {
+  display: inline-block;
+  margin-left: 5em;
+}
+
+#main>header nav, #main>header ul, #main>header ul li {
+  display: inline-block;
+}
+
+#main>header ul li a {
+  padding: 0.25em 2em 0.5em;
+  margin: 0 0.5em;
+  color: var(--reverse);
+  text-decoration: none;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#main>header ul li a:hover {
+  background-color: var(--main-hl-color);
+  color: var(--text-color);
+}
+
+#main>header {
+  font-size: 2em;
+  line-height: 2em;
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--text-color);
+  color: var(--reverse);
+  z-index: 1;
+}
+
+.leaflet-container {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  z-index: 0;
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent
+}
+
+body.tr>[lang=en] {
+  display: none;
+}
+
+body.en>[lang=tr] {
+  display: none;
+}
+
+#about,#search {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  background: var(--aboutBG);
+  width: 96vw;
+  height: calc(95vh - 8vw);
+  font-weight: 900;
+  padding-top: 6vw;
+  z-index: -1;
+}
+
+section::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+section {
+	font-size: 3em;
+  padding: 2vw;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--aboutBGBG);
+}
+
+section>header {
+  padding: 0 0 5em
+}
+
+section::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+section p {
+  display: block;
+  margin: 0 auto 4em;
+  max-width: 35em;
+  line-height: 1.6em;
+}
+
+.update {
+  font-style: italic;
+}
+
+::selection {
+  color: var(--text-color);
+  background: var(--main-hl-color);
+}
+
+mark {
+  background: var(--main-hl-color)
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* The content */
+#search>article {
+  position: relative;
+  top: 20vh;
+  width: 90vw;
+  text-align: center;
+  margin-top: 0 auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+	position: fixed;
+	top: 7vh;
+	right: 5vw;
+	font-size: 4rem;
+  cursor: pointer;
+  color: var(--main-hl-color);
+  font-weight: 100;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  text-align: center;
+  line-height: 1.8em;
+  vertical-align: middle;
+}
+
+.overlay .closebtn:hover {
+  color: var(--text-color);
+  background: var(--main-hl-color);
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 3rem;
+  font-size: 3rem;
+  border: none;
+  float: left;
+  width: 70%;
+  background: var(--text-color);
+	color:var(--reverse);
+	border-top-left-radius: 10vh;
+	border-bottom-left-radius: 10vh;
+}
+
+.overlay input[type=text]:hover {
+  background: var(--text-color);
+}
+
+/* Style the submit button */
+.overlay button {
+  width: 20%;
+  padding: 3rem;
+  background: var(--main-hl-color);
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+	border-top-right-radius: 10vh;
+	border-bottom-right-radius: 10vh;
+}
+
+.overlay button:hover {
+  background: var(--main-hl-color);
+}
+
+#search fomr{height: 10vh;}

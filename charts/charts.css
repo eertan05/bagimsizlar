@@ -1,0 +1,19 @@
+#chartContainer {
+  width: 100vmin;
+  height: auto;
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center */
+  position: relative;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+
+#myChart {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin-top: 6rem;
+}

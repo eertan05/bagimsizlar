@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="trans.css">
+  <link rel="stylesheet" href="window-engine.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p>trans-making mapping</p>
+  </header>
+  <div class="windowGroup smallText">
+
+    <!-- WINDOW 1 -->
+    <div id="window1" class="window">
+      <div class="purple">
+        <p class="windowTitle">filters</p>
+      </div>
+      <div class="mainWindow" id="filtercheckboxes">
+      </div>
+    </div>
+
+    <!-- WINDOW 2 -->
+    <div id="window2" class="window fade">
+      <div class="cyan">
+        <p class="windowTitle">node informations</p>
+      </div>
+      <div id="nodeInfo" class="mainWindow">
+      </div>
+    </div>
+
+    <!-- WINDOW 3 -->
+    <div id="window3" class="window fade">
+      <div class="crimson">
+        <p class="windowTitle">load data</p>
+      </div>
+      <div id="loadData" class="mainWindow">
+        <script lang="javascript" src="js/xlsx.full.min.js" type="text/javascript"></script>
+        <script>
+          $(document).ready(function() {
+            $("#fileUploader").change(function(evt) {
+              var selectedFile = evt.target.files[0];
+              var reader = new FileReader();
+              reader.onload = function(event) {
+                var data = event.target.result;
+                var workbook = XLSX.read(data, {
+                  type: 'binary'
+                });
+
+                var json_object = [];
+                workbook.SheetNames.forEach(function(sheetName) {
+                  if (sheetName == "nodes" || sheetName == "NODES") {
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    json_object[0] = JSON.stringify(XL_row_object);
+                  }
+                  if (sheetName == "edges" || sheetName == "EDGES") {
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    json_object[1] = JSON.stringify(XL_row_object);
+                  }
+                });
+
+                json_object = '{"nodes":' + json_object[0] + ', "links":' + json_object[1] + '}';
+                //document.getElementById("jsonObject").innerHTML = json_object;
+
+                // save JSON files on Server
+                blobajax(json_object);
+
+              };
+
+              reader.onerror = function(event) {
+                console.error("File could not be read! Code " + event.target.error.code);
+              };
+
+              reader.readAsBinaryString(selectedFile);
+            });
+
+            function blobajax(cont) {
+              // (A) CREATE BLOB OBJECT
+              var myBlob = new Blob([cont], {
+                type: "text/plain"
+              });
+              // (B) FORM DATA
+              var data = new FormData();
+              var n = $("#fileName").val() + ".json"
+              data.append("upfile", myBlob, n);
+              // (C) AJAX UPLOAD TO SERVER
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "upload.php");
+              xhr.onload = function() {
+                console.log(this.status);
+                console.log(this.response);
+                if (this.status == 200) {
+                  //location.reload();
+                  window.location.href = window.location.href.replace(/[\?#].*|$/, "?f=" + n);
+                } else {
+                  document.getElementById("jsonObject").innerHTML = "ERROR. please check the excel file and try again";
+                }
+              };
+              xhr.send(data);
+            }
+
+
+            $("#fileName").keyup(function() {
+              $("#fb").css("display", "block");
+            });
+
+          });
+        </script>
+        <p>
+          You can upload your data as an excel file.
+          It should have two sheets named "NODES" and "EDGES"</p>
+        <hr>
+        <p> NODES column names must be:
+          id, name, type, info, value (the last two are optional)</br>
+          </br>
+          (value sorts nodes on a horizontal line;</br>
+          info is shown when node clicked)
+        </p>
+        <hr>
+        <p> EDGES column names must be:
+          source, destination, relation</p>
+        <hr>
+        <p>see example files: <br>
+          <img src="images/NODES.png" width="200px" ;><br>
+          <img src="images/EDGES.png" width="200px" ;>
+        </p>
+        <label id="jsonObjectLink">upload your data</label>
+        <div>
+          <span class="smallText">name your file to access later</br></span>
+          <input type="text" id="fileName" name="fileName">
+        </div>
+        <div id="fb">
+          <span class="smallText">select your excel file</br></span>
+          <input type="file" id="fileUploader" name="fileUploader" accept=".xls, .xlsx" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span id="button1"> filters </span>
+    <span id="button2"> node informations </span>
+    <span id="button3"> load data </span>
+  </footer>
+  <svg id='viz'></svg>
+</body>
+
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<script>
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+  var controls = {};
+
+  d3.json("uploads/trans.json").then(function(graph) {
+    graph.nodes.forEach(function(d) {
+      if (!(d.type in controls)) {
+      controls[d.type] = true;
+    }
+  });
+
+  Object.entries(controls).forEach(([key, value]) => {
+    // create the checkbox in window1
+    document.getElementById("filtercheckboxes").innerHTML += '<input type="checkbox" class="types" id=' + key + ' value=' + key + ' checked> <span style="color:' + color(key) + '; weight:bold" >' + key + '</span></br>'
+  });
+
+  var graphLayout = d3.forceSimulation(graph.nodes)
+    .force("charge", d3.forceManyBody().strength(-3000))
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("x", d3.forceX(width / 2).strength(1))
+    .force("y", d3.forceY(height / 2).strength(1))
+    .force("link", d3.forceLink(graph.links).id(function(d) {
+      return d.id;
+    }).distance(50).strength(1))
+    .on("tick", ticked);
+
+  var adjlist = [];
+
+  graph.links.forEach(function(d) {
+    adjlist[d.source.index + "-" + d.target.index] = true;
+    adjlist[d.target.index + "-" + d.source.index] = true;
+  });
+
+  function neigh(a, b) {
+    return (a == b || adjlist[a + "-" + b]);
+  }
+
+  d3.selectAll("#filtercheckboxes .types").on("click", function() {
+    controls[this.value] = this.checked;
+    node.call(refresh);
+  });
+
+
+  var svg = d3.select("#viz").attr("width", width).attr("height", height);
+  var container = svg.append("g");
+
+  svg.call(
+    d3.zoom()
+    .scaleExtent([.1, 4])
+    .on("zoom", function() {
+      container.attr("transform", d3.event.transform);
+    })
+  );
+
+  var link = container.append("g").attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter()
+    .append("line")
+    .attr("stroke", "#aaa")
+    .attr("stroke-width", "1px");
+
+  var node = container.append("g").attr("class", "nodes")
+    .selectAll("g")
+    .data(graph.nodes)
+    .enter()
+    .append("circle")
+    .attr("r", 5)
+    .attr("fill", function(d) {
+      return color(d.type);
+    })
+
+  node.on("mouseover", focus).on("mouseout", unfocus);
+
+  node.call(
+    d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended)
+  );
+
+  var labelNode = container.append("g").attr("class", "labelNodes")
+    .selectAll("text")
+    .data(graph.nodes)
+    .enter()
+    .append("text")
+    .text(function(d) {
+      return d.name;
+    })
+    .style("fill", "#555")
+    .style("font-family", "Arial")
+    .style("font-size", 12)
+    .style("pointer-events", "none") // to prevent mouseover/drag capture
+    .attr("transform", function(d) {
+      return "translate(" + d.x + 2 + "," + d.y + ")"
+    });
+
+  node.on("mouseover", focus).on("mouseout", unfocus);
+
+  function ticked() {
+    node.call(updateNode);
+    link.call(updateLink);
+    labelNode.call(updateNode);
+  }
+
+  function fixna(x) {
+    if (isFinite(x)) return x;
+    return 0;
+  }
+
+  function focus(d) {
+    var index = d3.select(d3.event.target).datum().index;
+    node.style("opacity", function(o) {
+      return neigh(index, o.index) ? 1 : 0.1;
+    });
+     labelNode.attr("display", function(o) {
+       return neigh(index, o.id) ? "block" : "none";
+    });
+    link.style("opacity", function(o) {
+      return o.source.index == index || o.target.index == index ? 1 : 0.1;
+    });
+  }
+
+  function unfocus() {
+    labelNode.attr("display", "block");
+    node.style("opacity", 1);
+    link.style("opacity", 1);
+  }
+
+  function updateLink(link) {
+    link.attr("x1", function(d) {
+        return fixna(d.source.x);
+      })
+      .attr("y1", function(d) {
+        return fixna(d.source.y);
+      })
+      .attr("x2", function(d) {
+        return fixna(d.target.x);
+      })
+      .attr("y2", function(d) {
+        return fixna(d.target.y);
+      });
+  }
+
+  function updateNode(node) {
+    node.attr("transform", function(d) {
+      return "translate(" + fixna(d.x) + "," + fixna(d.y) + ")";
+    });
+  }
+
+  function refresh(node) {
+    node.attr("display", function(d) {
+      return controls[d.type] ? "block" : "none"
+    });
+
+    link.attr("display", function(d) {
+      return (controls[d.target.type] && controls[d.source.type]) ? "block" : "none"
+    });
+
+    labelNode.attr("display", function(d) {
+      return controls[d.type] ? "block" : "none"
+    });
+  }
+
+  function dragstarted(d) {
+    d3.event.sourceEvent.stopPropagation();
+    if (!d3.event.active) graphLayout.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) graphLayout.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  }); // d3.json
+
+</script>
+
+</html>
+<script src="window-engine.js"></script>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <title>Canvas Graphics</title>
+  <style>
+
+    body {
+      display: flex;
+      //justify-content: space-between;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Roboto Mono';
+      font-variant: no-common-ligatures proportional-nums;
+      font-size: 5em;
+    }
+
+    #canvasContainer {
+      margin: 10px;
+      position: relative;
+    }
+
+    p {
+      background-color: #ccc;
+      width: 100%;
+      padding: 10px;
+    }
+
+    canvas {
+      border: 1px solid black;
+      background-color: #af69cc;
+           text-rendering: optimizeLegibility;
+    }
+
+    .controls {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px ;
+      align-items: flex-start;
+    }
+
+    input {
+      padding: 10px 20px;
+      margin: 8px 0;
+    }
+
+    .control-input {
+      margin-bottom: 10px;
+    }
+
+    .brand{
+      padding: 20px;
+    font-size: 5em;
+    color: #af69cc;
+    font-weight:bold;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvasContainer">
+    <canvas id="canvas" width="1080" height="1080"></canvas>
+  </div>
+  <div class="controls">
+    <p><label for="imageInput">lütfen önce kullanacağınız resmi yükleyin</label></br>
+      <input type="file" id="imageInput">
+    </p>
+    <p><label for="resizeSlider">resmin boyutunu değiştirebilir siniz</label></br>
+      <input type="range" id="resizeSlider" min="10" max="200" value="100">
+    </p>
+    <p><label for="resizeSlider">ayrıca resmin üzerinde fareyi basılı tutarak resmin posizyonunu ayarlayabilirsiniz</label></br>
+    <p><label for="titleInput">gerekli yazıları girin: </br> önce başlık (genellikle bağımsız inisiyatifin adı)</label></br>
+      <input type="text" id="titleInput" placeholder="Enter title"></br>
+      <label for="guestsInput"> konuşmacılarınızın isimleri</label></br>
+      <input type="text" id="guestsInput" placeholder="Enter guests"></br>
+      <label for="makerInput">programı hazırlayan ve sunanın adı</label></br>
+      <input type="text" id="makerInput" placeholder="Enter maker"></br>
+      <label for="dateInput">yayımlanacağı tarih (03 Kasım 2023 formatında)</label></br>
+      <input type="date" id="dateInput" placeholder="Enter date">
+    </p>
+    <p><label for="titleInput">herşey tamamsa dosyanızı save edebilirsiniz...</label></br>
+      <button id="saveButton">Save</button>
+    </p>
+  </div>
+  <div class="brand">
+    Bağımsızlar Açık Radyo programı için instagram post imajı üreticisi...
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const resizeSlider = document.getElementById('resizeSlider');
+    const titleInput = document.getElementById('titleInput');
+    const guestsInput = document.getElementById('guestsInput');
+    const makerInput = document.getElementById('makerInput');
+    const dateInput = document.getElementById('dateInput');
+    const imageInput = document.getElementById('imageInput');
+    const saveButton = document.getElementById('saveButton');
+
+    imageInput.addEventListener('change', handleImageUpload);
+    resizeSlider.addEventListener('input', drawCanvas);
+    titleInput.addEventListener('input', drawCanvas);
+    guestsInput.addEventListener('input', drawCanvas);
+    makerInput.addEventListener('input', drawCanvas);
+    dateInput.addEventListener('input', drawCanvas);
+    saveButton.addEventListener('click', saveImage);
+
+    let uploadedImage;
+    let isDragging = false;
+    let imageWidth, imageHeight;
+    let isImageDragging = false;
+    let imageOffsetX, imageOffsetY;
+    let centerX, centerY;
+    let img_title;
+
+    const ig_temp = new Image();
+    ig_temp.src = 'ig_NEWtemplate.png';
+
+
+    function handleImageUpload(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function() {
+        uploadedImage = new Image();
+        uploadedImage.onload = function() {
+          // Calculate the center position only when the image is initially loaded
+          if (!centerX && !centerY) {
+            centerX = canvas.width / 2;
+            centerY = canvas.height / 2;
+          }
+          drawCanvas(); // Draw the canvas after the image is loaded
+        };
+        uploadedImage.src = reader.result;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+
+
+    function drawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Set the canvas background color to #af69cc
+      ctx.fillStyle = '#af69cc';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      //canvas.style.backgroundColor = '#af69cc';
+
+      if (uploadedImage) {
+        const scale = resizeSlider.value / 100;
+        imageWidth = uploadedImage.width * scale;
+        imageHeight = uploadedImage.height * scale;
+
+        // Draw the uploaded image at the centered position
+        ctx.drawImage(uploadedImage, centerX - imageWidth / 2, centerY - imageHeight / 2, imageWidth, imageHeight);
+      }
+
+      // Draw the template image
+      ctx.drawImage(ig_temp, 0, 0, 1080, 1080);
+
+
+
+      ctx.font = 'bold 62px Roboto Mono';
+      ctx.fontFeatureSettings = "'liga' 0, 'pnum' 1"; // Disable ligatures and enable proportional numbers
+      ctx.fillStyle = 'white'
+      ctx.strokeStyle = 'white'; // Set the color of the border
+      ctx.lineWidth = 2; // Set the width of the border
+;
+      var charCount = titleInput.value.length; // This will give you the number of characters in the string
+      switch (true) {
+        case charCount > 52:
+          ctx.font = 'bold 38px Roboto Mono';
+          drawWrappedText(ctx, titleInput.value, 250, 188, 766, 8);
+          break;
+        case charCount > 32:
+          ctx.font = 'bold 44px Roboto Mono';
+          drawWrappedText(ctx, titleInput.value, 250, 188, 766, 12);
+          break;
+        default:
+          drawWrappedText(ctx, titleInput.value, 250, 188, 766, 12);
+      }
+
+
+
+      ctx.font = 'bolder 36px Roboto Mono';
+      drawWrappedText(ctx, guestsInput.value, 20, 874, 1005, 8);
+
+      ctx.font = '28px Roboto Mono';
+      ctx.fillText(makerInput.value, 320, 915);
+
+
+      var date = new Date(dateInput.value);
+      // Format the date as "DD MON YYYY" (e.g., "22 DEC 2023")
+      var options = { day: '2-digit', month: 'long', year: 'numeric' };
+      var formattedDate = date.toLocaleDateString('tr-TR', options);
+
+      ctx.font = 'bolder 38px Roboto Mono';
+      ctx.fillStyle = 'black';
+      ctx.fillText(formattedDate, 24, 986);
+
+      img_title= formattedDate + "-"+ (titleInput.value).substr(0, 10);
+      img_title = "B-" +img_title.split(" ").join("");
+    }
+
+    function drawWrappedText(context, text, x, y, maxWidth, lineHeight) {
+      let words = text.split(' ');
+      let line = '';
+      let offsetY = y;
+      let textMetrics;
+
+      for (let word of words) {
+        let testLine = line + word + ' ';
+        textMetrics = context.measureText(testLine);
+        const totalHeight = textMetrics.actualBoundingBoxAscent + textMetrics.actualBoundingBoxDescent;
+        console.log(totalHeight);
+        let testWidth = textMetrics.width;
+        if (testWidth > maxWidth && line !== '') {
+          context.fillText(line, x, offsetY - textMetrics.actualBoundingBoxAscent);
+          line = word + ' ';
+          offsetY += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
+
+      context.fillText(line.trim(), x, offsetY);
+    }
+
+
+
+    canvas.addEventListener('mousedown', function(event) {
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+
+      // Check if the mouse click is within the bounds of the uploaded image
+      if (
+        mouseX >= centerX - imageWidth / 2 &&
+        mouseX <= centerX + imageWidth / 2 &&
+        mouseY >= centerY - imageHeight / 2 &&
+        mouseY <= centerY + imageHeight / 2
+      ) {
+        isDragging = true;
+
+        // Calculate the offset from the top-left corner of the image
+        offsetX = mouseX - (centerX - imageWidth / 2);
+        offsetY = mouseY - (centerY - imageHeight / 2);
+      }
+    });
+
+    canvas.addEventListener('mousemove', function(event) {
+      if (isDragging) {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        // Calculate the new top-left position for the image
+        const newTopLeftX = mouseX - offsetX;
+        const newTopLeftY = mouseY - offsetY;
+
+        // Calculate the new centered position for the image
+        centerX = newTopLeftX + imageWidth / 2;
+        centerY = newTopLeftY + imageHeight / 2;
+
+        // Draw the image at the new position
+        drawCanvas();
+      }
+    });
+
+    canvas.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+
+
+    function saveImage() {
+      const dataURL = canvas.toDataURL('image/png');
+      const downloadLink = document.createElement('a');
+      downloadLink.href = dataURL;
+      downloadLink.download = img_title + '.png';
+      downloadLink.click();
+    }
+  </script>
+</body>
+
+</html>

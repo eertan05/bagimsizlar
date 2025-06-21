@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title lang="en">Independents</title>
+  <script src="js\p5.min.js"></script>
+  <script src="js\leaflet.js"></script>
+  <link href="js\leaflet.css" rel="stylesheet">
+  <script src="js\leaflet.markercluster.js"></script>
+  <script type="text/javascript" src="js/tile-stamen.js"></script>
+  <script src="js\indmap.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <h1>
+        <span lang="tr">Bağımsızlar İndeksi</span>
+        <!--<span lang="en">Independents</span>-->
+      </h1>
+      <nav aria-label="primary" id="nav_primary">
+        <ul class="visualizations">
+          <li><a onclick="openItem('listing')">listing</a></li>
+          <li><a onclick="openItem('geographical')">geographical</a></li>
+          <li><a onclick="openItem('relational')">relational</a></li>
+          <li><a onclick="openItem('temporal')">temporal</a></li>
+          <li><a onclick="openItem('about')" id="h_about">about</a></li>
+        </ul>
+        <ul class="service">
+          <li><a onclick="openItem('login')">login</a></li>
+          <li><a onclick="document.body.className='en'">ENG</a></li>
+          <li><a onclick="document.body.className='tr'">TUR</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="geographical"></section>
+    <section id="listing"></section>
+    <section id="relational"></section>
+    <section id="about" lang="en" class="overlay">
+      <span class="closebtn" onclick="closeItem('about')" title="Close Overlay">x</span>
+      <article>
+        <p><mark>Independents</mark> is a map-based website that lists the contemporary independent initiatives, which have/had been active any period of time in the last decades -since 2000- in Turkey.</p>
+        <p>With an expanded and contemporary understanding of the arts, <mark>Independents</mark> targets the art initiatives that are working with contemporary methods and for the well being of the society.</p>
+        <p>Contemporary independent initiatives can be in any form including association, foundations, cooperatives, artist-run spaces, self-defined groups, nonprofit businesses, etc., with or without space and in any terrain i.e. the commonplace
+          contemporary art, visual arts, performing arts, participatory art, socially engaged arts, contemporary theatre, biennials, festivals, architecture, urbanism, design, economy-focused, socially engaged or technology-centered.</p>
+        <p><mark>Independents</mark> will include all major cities as well as other Anatolian cities where an independent contemporary initiative based.</p>
+        <p><mark>Independents</mark> also hosts and maintains the archives of the initiatives that are not active anymore.</p>
+        <p><mark>Independents</mark> classifies the information of the initiatives in a way that allows users to filter accurately and access to the targeted records. Independents will also provide customized data visualizations based on the
+          classification scheme, i.e. type of the organizations, work-fields, projects’ focuses, supporting bodies, activity years, etc. /<p>
+            <p><mark>Independents</mark> will present irrefutable information on the mutual relation of the independent scene with the sociopolitical conditions we went through in the last decades.</p>
+            <footer>
+              <p class="update">Updated on <time datetime="2019-12-22T15:31:24+02:00">December 22nd 2019</time></p>
+            </footer>
+      </article>
+    </section>
+    <section id="search" lang="en" class="overlay">
+      <span class="closebtn" onclick="closeItem('search')" title="Close Overlay">x</span>
+      <article>
+        <form action="">
+          <!--action_page.php-->
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </article>
+    </section>
+    <nav aria-label="secondary" id="nav_drawer">
+      <ul class="">
+        <li><a onclick="openItem('organization')">organization</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>

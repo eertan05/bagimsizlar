@@ -1,0 +1,389 @@
+:root {
+  --main-hl-color: #9c69c9;
+  --main-h1-down: rgba(156, 105, 201, 0.5);
+  --aboutBG: #fff;
+  --scrollbarBG: #transparent;
+  --thumbBG: rgba(255, 255, 255, 0.9);
+  --text-color: rgba(255, 255, 255, 0.9);
+  --reverse: #000;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 9px;
+  overflow: hidden;
+  font-family: "Space Mono";
+}
+
+h1 {
+  display: inline-block;
+  padding: 10px 5em;
+  position: absolute;
+}
+
+body.tr>[lang=en] {
+  display: none;
+}
+
+body.en>[lang=tr] {
+  display: none;
+}
+
+section::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+section {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--reverse);
+}
+
+section>header {
+  padding: 0 0 5em
+}
+
+section::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: var(--reverse);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+#about p {
+  display: block;
+  margin: 0 auto 4em;
+  max-width: 35em;
+  line-height: 1.6em;
+}
+
+#nav_primary {
+  padding: 10px 5em;
+  margin: 0 -10em;
+  text-align: center;
+  width: 100%;
+}
+
+#nav_primary .service {
+  float: right;
+}
+
+#nav_drawer {}
+
+#nav_primary, #nav_primary ul, #nav_primary ul li {
+  display: inline-block;
+}
+
+#nav_primary ul li a {
+  padding: 0 0.5em;
+  margin: 0 0em;
+  color: var(--reverse);
+  text-decoration: none;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#main>header ul li a:hover {
+  background-color: var(--main-hl-color);
+  color: var(--text-color);
+}
+
+#main>header {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 900;
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--text-color);
+  color: var(--reverse);
+  box-shadow: 20px 0px 50px 15px rgba(128, 128, 128, 0.2);
+  z-index: 101;
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent
+}
+
+#about, #search, #listing {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  background: var(--aboutBG);
+  width: 100vw;
+  height: 95vh;
+  font-weight: 900;
+  padding: 6vh 0;
+  font-size: 3em;
+  opacity: 0;
+  transition: all 0.5s
+}
+
+#listing_cont {
+  display: flex;
+  width: 55vw;
+  margin: auto;
+  transition: all 1s;
+}
+
+#listing_list {
+  width: 55vw !important
+}
+
+/*#listing_desc {width: 0;}*/
+.sel {
+  text-align: right;
+  background-color: #eeeeee;
+}
+
+#search>article {
+  position: relative;
+  top: 20vh;
+  width: 90vw;
+  text-align: center;
+  margin-top: 0 auto;
+}
+
+.floater {
+  height: 50vh;
+  width: 10vw;
+  z-index: 102;
+  position: absolute;
+  padding: 2.5em;
+
+  font-size: 0.8rem;
+  background-color: #eeeeee;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+
+}
+
+.floater>h2 {
+  margin-bottom: 1em;
+  font-weight: 900;
+  display: block;
+  cursor: move;
+}
+
+.floater>p {
+  font-weight: 400
+}
+
+#search form {
+  height: 10vh;
+}
+
+#geographical {
+  opacity: 0;
+  width: 100vw;
+  height: 95vh;
+  transition: all 0.5s
+}
+
+.listing_label {
+  cursor: pointer;
+  padding: 0 0.5em;
+  margin: 0 0em;
+  color: var(--reverse);
+  text-decoration: none;
+  transition: all 1s;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+.listing_label:hover {
+  background-color: var(--main-hl-color);
+  color: var(--text-color);
+}
+
+#h_about {
+  border-left: 1px solid #000;
+}
+
+#footer {
+  padding-bottom: 6vh
+}
+
+.update {
+  font-style: italic;
+}
+
+::selection {
+  color: var(--text-color);
+  background: var(--main-hl-color);
+}
+
+mark {
+  background: var(--main-hl-color)
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* Close button */
+.overlay .closebtn, .closeLabelBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--main-hl-color);
+  font-weight: 100;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  text-align: center;
+  line-height: 1.8em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.overlay .closebtn:hover, .closeLabelBtn:hover  {
+  color: var(--text-color);
+  background: var(--main-hl-color);
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 3rem;
+  font-size: 3rem;
+  border: none;
+  float: left;
+  width: 70%;
+  background: var(--text-color);
+  color: var(--reverse);
+  border-top-left-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+}
+
+.overlay input[type=text]:hover {
+  background: var(--text-color);
+}
+
+/* Style the submit button */
+.overlay button {
+  width: 20%;
+  padding: 3rem;
+  background: var(--main-hl-color);
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+}
+
+.overlay button:hover {
+  background: var(--main-hl-color);
+}
+
+.leaflet-tile-pane {
+  opacity: 0.5
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 10px
+}
+
+.leaflet-popup {
+  font-size: 0.75rem;
+  overflow: hidden;
+  font-family: "Space Mono";
+}
+
+.leaflet-popup-content>h2 {
+  font-weight: 900;
+}
+
+/*--------------------------*/
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+  /* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+  -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+  -moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+  -o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+  transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.marker-cluster {
+  background-color: var(--main-h1-down);
+  background-clip: padding-box;
+  border-radius: 20px;
+  color: var(--text-color);
+}
+
+.marker-cluster div {
+  background-color: var(--main-hl-color);
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 30px;
+  transition: all 0.15s;
+  transform: scale(1);
+}
+
+.leaflet-marker-pane img {
+  transition: all 0.15s;
+}
+
+.leaflet-marker-pane img:hover {
+  margin-left: -20px !important;
+  margin-top: -20px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.marker-cluster div:hover {
+  transform: scale(1.5);
+}
+
+.marker-cluster span {
+  line-height: 30px;
+}
+
+/*---------------------------*/

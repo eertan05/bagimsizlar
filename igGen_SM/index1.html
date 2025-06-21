@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>Canvas Graphics</title>
+  <style>
+    .space-mono-regular {
+      font-family: "Space Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .space-mono-bold {
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .space-mono-regular-italic {
+      font-family: "Space Mono", monospace;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .space-mono-bold-italic {
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    body {
+      display: flex;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Roboto Mono';
+      font-variant: no-common-ligatures proportional-nums;
+      font-size: 1em;
+    }
+
+    #canvasContainer {
+      margin: 10px;
+      position: relative;
+    }
+
+    p {
+      background-color: #ccc;
+      width: 100%;
+      padding: 10px;
+    }
+
+    canvas {
+      border: 1px solid black;
+      background-color: #af69cc;
+      text-rendering: optimizeLegibility;
+    }
+
+    .controls {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+      align-items: flex-start;
+    }
+
+    input {
+      padding: 10px 20px;
+      margin: 8px 0;
+    }
+
+    .control-input {
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      padding: 20px;
+      font-size: 5em;
+      color: #af69cc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvasContainer">
+    <canvas id="canvas" width="1080" height="1080"></canvas>
+  </div>
+
+  <div class="controls">
+    <p>
+      <label for="bgColorPicker">Choose Background Color:</label><br>
+      <input type="color" id="bgColorPicker" value="#af69cc">
+    </p>
+
+    <p>
+      <label>Choose B mask:</label><br>
+      <input type="radio" name="template" id="B_male" value="B_mask_male.png">
+      <label for="B_male">B MASK MALE</label><br>
+      <input type="radio" name="template" id="B_female" value="B_mask_female.png">
+      <label for="B_female">B MASK FEMALE</label><br>
+      <input type="radio" name="template" id="B_none" value="none">
+      <label for="B_none">NONE</label><br>
+    </p>
+    <p>
+      <label for="imageInput">Kullanmak isterseniz bir resim yükleyin</label><br>
+      <input type="file" id="imageInput">
+      <button id="removeImageButton">Remove Image</button>
+    </p>
+    <p>
+      <button id="swapLayersButton">Swap image and B Layers</button>
+    </p>
+    <p>
+      <label for="resizeSlider">Resim boyutunu ayarla</label><br>
+      <input type="range" id="resizeSlider" min="10" max="200" value="100">
+    </p>
+    <p>
+      <label for="textColorPicker">Choose Text Color:</label><br>
+      <input type="color" id="textColorPicker" value="#ffffff">
+    </p>
+    <p>
+      <label for="text1Input">This is the bold text:</label><br>
+      <input type="text" id="text1Input" placeholder="Enter text"><br>
+      <input type="range" id="fontSizeSlider1" min="20" max="250" value="62">
+      <input type="range" id="textWidthSlider1" min="100" max="500" value="200">
+    </p>
+    <p>
+      <input type="text" id="text2Input" placeholder="Enter text"><br>
+      <input type="range" id="fontSizeSlider2" min="20" max="250" value="62">
+      <input type="range" id="textWidthSlider2" min="100" max="500" value="200">
+    </p>
+    <p>
+      <input type="text" id="text3Input" placeholder="Enter text"><br>
+      <input type="range" id="fontSizeSlider3" min="20" max="250" value="62">
+      <input type="range" id="textWidthSlider3" min="100" max="500" value="200">
+    </p>
+    <p>
+      <label for="saveButton">Her şey tamamsa dosyanızı kaydedebilirsiniz...</label><br>
+      <button id="saveButton">Save</button>
+    </p>
+  </div>
+  <div class="brand">
+    Bağımsızlar Sosyal Medya için instagram post imajı üreticisi...
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const resizeSlider = document.getElementById('resizeSlider');
+    const text1Input = document.getElementById('text1Input');
+    const text2Input = document.getElementById('text2Input');
+    const text3Input = document.getElementById('text3Input');
+    const imageInput = document.getElementById('imageInput');
+    const saveButton = document.getElementById('saveButton');
+    const removeImageButton = document.getElementById('removeImageButton');
+
+    imageInput.addEventListener('change', handleImageUpload);
+    resizeSlider.addEventListener('input', drawCanvas);
+    text1Input.addEventListener('input', drawCanvas);
+    text2Input.addEventListener('input', drawCanvas);
+    text3Input.addEventListener('input', drawCanvas);
+    saveButton.addEventListener('click', saveImage);
+    removeImageButton.addEventListener('click', removeImage);
+
+    let uploadedImage;
+    let isDragging = false;
+    let imageWidth, imageHeight;
+    let isImageDragging = false;
+    let imageOffsetX, imageOffsetY;
+    let centerX, centerY;
+    let img_title;
+    let ig_temp = null;
+    let toSave = 0;
+
+    function handleImageUpload(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function() {
+        uploadedImage = new Image();
+        uploadedImage.onload = function() {
+          centerX = canvas.width / 2;
+          centerY = canvas.height / 2;
+          drawCanvas(); // Draw the canvas after the image is loaded
+        };
+        uploadedImage.src = reader.result;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Define variables for template radio buttons
+    const templateRadioButtons = document.querySelectorAll('input[name="template"]');
+
+    // Event listener for template radio buttons change
+    templateRadioButtons.forEach(button => {
+      button.addEventListener('change', function() {
+        if (this.value !== "none") {
+          ig_temp = new Image();
+          ig_temp.src = 'templates/' + this.value;
+          ig_temp.onload = function() {
+            drawCanvas();
+          };
+          ig_temp.onerror = function() {
+            console.error("Error loading image:", ig_temp.src);
+          };
+        } else {
+          ig_temp = null;
+          drawCanvas(); // Redraw canvas when radio button changes
+        }
+      });
+    });
+
+    // Define variables for font size sliders and initial font sizes
+    const fontSizeSlider1 = document.getElementById('fontSizeSlider1');
+    const fontSizeSlider2 = document.getElementById('fontSizeSlider2');
+    const fontSizeSlider3 = document.getElementById('fontSizeSlider3');
+
+    const textWidthSlider1 = document.getElementById('textWidthSlider1');
+    const textWidthSlider2 = document.getElementById('textWidthSlider2');
+    const textWidthSlider3 = document.getElementById('textWidthSlider3');
+
+    let fontSize1 = fontSizeSlider1.value;
+    let fontSize2 = fontSizeSlider2.value;
+    let fontSize3 = fontSizeSlider3.value;
+
+    let text1Width = textWidthSlider1.value;
+    let text2Width = textWidthSlider2.value;
+    let text3Width = textWidthSlider3.value;
+
+    fontSizeSlider1.addEventListener('input', function() {
+      fontSize1 = this.value;
+      drawCanvas();
+    });
+
+    fontSizeSlider2.addEventListener('input', function() {
+      fontSize2 = this.value;
+      drawCanvas();
+    });
+
+    fontSizeSlider3.addEventListener('input', function() {
+      fontSize3 = this.value;
+      drawCanvas();
+    });
+
+    textWidthSlider1.addEventListener('input', function() {
+      text1Width = this.value;
+      drawCanvas();
+    });
+
+    textWidthSlider2.addEventListener('input', function() {
+      text2Width = this.value;
+      drawCanvas();
+    });
+
+    textWidthSlider3.addEventListener('input', function() {
+      text3Width = this.value;
+      drawCanvas();
+    });
+
+    function drawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw background color
+      ctx.fillStyle = bgColorPicker.value;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw uploaded image if exists
+      if (uploadedImage) {
+        const scaleFactor = resizeSlider.value / 100;
+        imageWidth = uploadedImage.width * scaleFactor;
+        imageHeight = uploadedImage.height * scaleFactor;
+
+        if (!isDragging) {
+          centerX = canvas.width / 2;
+          centerY = canvas.height / 2;
+        }
+
+        ctx.drawImage(
+          uploadedImage,
+          centerX - imageWidth / 2,
+          centerY - imageHeight / 2,
+          imageWidth,
+          imageHeight
+        );
+      }
+
+      // Draw text boxes
+      ctx.fillStyle = textColorPicker.value;
+      ctx.font = `${fontSize1}px 'Space Mono', monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillText(
+        text1Input.value,
+        canvas.width / 2,
+        canvas.height / 2 - 100,
+        text1Width
+      );
+
+      ctx.font = `${fontSize2}px 'Space Mono', monospace`;
+      ctx.fillText(
+        text2Input.value,
+        canvas.width / 2,
+        canvas.height / 2,
+        text2Width
+      );
+
+      ctx.font = `${fontSize3}px 'Space Mono', monospace`;
+      ctx.fillText(
+        text3Input.value,
+        canvas.width / 2,
+        canvas.height / 2 + 100,
+        text3Width
+      );
+
+      // Draw image template if selected
+      if (ig_temp) {
+        ctx.drawImage(
+          ig_temp,
+          canvas.width / 2 - ig_temp.width / 2,
+          canvas.height / 2 - ig_temp.height / 2
+        );
+      }
+    }
+
+    function saveImage() {
+      const dataURL = canvas.toDataURL();
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'generated-image.png';
+      link.click();
+    }
+
+    function removeImage() {
+      uploadedImage = null;
+      drawCanvas();
+    }
+
+    drawCanvas(); // Initial draw when the page loads
+  </script>
+</body>
+
+</html>

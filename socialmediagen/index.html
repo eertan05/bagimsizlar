@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="{{ (grav.language.getActive ?: grav.config.site.default_lang)|e }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <script>
+      var home_url="{{ base_url_simple }}";
+    </script>
+
+
+  </head>
+  <body>
+    <div id="textEditor">
+      <h2>Text Editor</h2>
+    <div class="controls">
+      <label for="text">Text</label>
+      <input type="text" id="text" name="text">
+      <div class="slidecontainer">
+        <input type="range" min="100" max="1920" value="500" class="slider" id="width">
+        <span id="widthLabel">Width</span>
+
+        <input type="range" min="100" max="1920" value="500" class="slider" id="height">
+        <span id="heightLabel">Height</span>
+
+        <input type="range" min="1" max="500" value="5" class="slider" id="strokeWidth">
+        <span id="strokeWidthLabel">Stroke Width</span>
+      </div>
+      <form id="colo">
+        <input type="radio" id="rad_networknode" name="colors" value="#00CF7B">
+        <label for="rad_networknode">networknode</label>
+        <input type="radio" id="rad_workshop" name="colors" value="#684385">
+        <label for="rad_workshop">workshop</label>
+        <input type="radio" id="rad_panel" name="colors" value="#EB8801">
+        <label for="rad_panel">panel</label>
+        <input type="radio" id="rad_performance" name="colors" value="#B5BF00">
+        <label for="rad_performance">performance</label>
+        <input type="radio" id="rad_exhibition" name="colors" value="#FF1B85">
+        <label for="rad_exhibition">exhibition</label>
+      </form>
+  <a onclick="setSize(1080,1080)" class="button">instagram square post</a>
+  <a onclick="setSize(750,1334)" class="button">instagram story</a>
+
+  <a onclick="savePNG()" class="button">save png</a>
+  <a onclick="saveS()" class="button">save svg</a>
+  </div>
+  </div>
+  <div id="imageEditor" style="width: 1080px; height: 1080px;">
+    <h2>Image Editor</h2>
+    <div class="controls">
+      <label for="text2">Text</label>
+      <input type="text" id="text2" name="text2">
+
+      <input type="range" min="-100" max="100" value="10" class="slider" id="RimageContrast">
+      <span id="RimageContrastLabel">Red</span>
+      <input type="range" min="-100" max="100" value="10" class="slider" id="GimageContrast">
+      <span id="GimageContrastLabel">Green</span>
+      <input type="range" min="-100" max="100" value="10" class="slider" id="BimageContrast">
+      <span id="BimageContrastLabel">Blue</span>
+      <input type="range" min="-100" max="100" value="10" class="slider" id="IimageContrast">
+      <span id="IimageContrastLabel">Intercept</span>
+
+      <a onclick="saveiPNG()" class="button">save png</a>
+      <a onclick="saveiS()" class="button">save svg</a>
+    </div>
+    <input type="file" id="file"><br />
+    <!--<canvas id="canvas" width="1080" height="1080"></canvas>-->
+  </div>
+
+  </body>
+</html>

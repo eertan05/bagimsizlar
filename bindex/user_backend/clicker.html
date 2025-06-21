@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>CLICK HANDLER</title>
+    <!--<script src="https://www.ol.org/api/ol.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+
+</head>
+
+<body>
+    <div id="map"  class="map" style="height: 650px; width: 100%;" ></div>
+    <script>
+    const localmap = new ol.Map({
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+        ],
+        target: 'map',
+        view: new ol.View({
+            center: [0, 0],
+            zoom: 2
+        })
+});
+
+localmap.on('singleclick', function (evt) {
+    console.log(evt.coordinate);
+
+    // convert coordinate to EPSG-4326
+    console.log(ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326'));
+});
+  </script>
+</body>
+
+</html>
+
+
+<!-----------
+
+function get_lat_lng( $address ) {
+		$address = rawurlencode( $address );
+		$coord   = get_transient( 'geocode_' . $address );
+		if( empty( $coord ) ) {
+			$url  = 'http://nominatim.openstreetmap.org/?format=json&addressdetails=1&q=' . $address . '&format=json&limit=1';
+			$json = wp_remote_get( $url );
+			if ( 200 === (int) wp_remote_retrieve_response_code( $json ) ) {
+				$body = wp_remote_retrieve_body( $json );
+				$json = json_decode( $body, true );
+			}
+
+			$coord['lat']  = $json[0]['lat'];
+			$coord['long'] = $json[0]['lon'];
+			set_transient( 'geocode_' . $address, $coord, DAY_IN_SECONDS * 90 );
+		}
+		return $coord;
+	}
+  --->
